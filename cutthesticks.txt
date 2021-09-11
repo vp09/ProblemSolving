@@ -1,0 +1,30 @@
+def cutTheSticks(arr):
+    arr.sort()
+    prev = -1
+    l = len(arr)
+    for i in arr:
+        if i!=prev:
+            print(l)
+        l-=1
+        prev=i
+input()
+arr = list(map(int,input().split()))
+cutTheSticks(arr)
+
+ls = []
+    while len(arr) >= 1:
+        ls.append(len(arr))
+        minn = min(arr)
+        arr = [i-minn for i in arr if i!=minn]
+    return ls
+
+print(len(arr))
+while True:                 
+    arr = [x for x in arr if x != min(arr)] 
+    if len(arr)==0:
+        break
+    print(len(arr))
+
+while len(arr)!=0:
+    print(len(arr))
+    arr = [x for x in arr if x != min(arr)]
